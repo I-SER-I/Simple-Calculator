@@ -7,11 +7,15 @@ public class InputHandler {
     private List<String> dataList;
 
     public InputHandler() {}
-
     public InputHandler(String firstValue, String secondValue, String operation) {
         dataList = List.of(firstValue, secondValue, operation);
     }
 
+    /**
+     * Записывает значение с консоли
+     * 
+     * @return обработчик 
+     */
     public InputHandler read() {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String input;
@@ -23,6 +27,12 @@ public class InputHandler {
         }
         return this;
     }
+
+    /**
+     * Возвращяет входные данные
+     * 
+     * @return список входных данных
+     */
     public List<String> getValue() {
         return dataList;
     }
